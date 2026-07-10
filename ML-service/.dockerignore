@@ -1,0 +1,9 @@
+__pycache__
+*.py[cod]
+.venv
+venv
+.git
+.gitignore
+solvemate_dataset_full.csv
+solvemate_ml_dataset.csv
+01_train_model.py

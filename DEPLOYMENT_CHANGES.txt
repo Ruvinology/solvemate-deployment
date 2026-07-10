@@ -1,0 +1,19 @@
+SolveMate deployment preparation completed:
+
+1. Frontend API URL now uses VITE_API_BASE_URL instead of a hard-coded localhost URL.
+2. Added Frontend/Dockerfile and Frontend/Caddyfile for production hosting.
+3. Renamed "ML service" to "ML-service".
+4. Added ML-service/Dockerfile using Gunicorn.
+5. Included the trained Random Forest model: ML-service/solvemate_ml_model.pkl.
+6. Pinned ML dependencies to versions compatible with the serialized model.
+7. Made the ML model path independent of the current working directory.
+8. Added environment-variable examples without secrets.
+9. Disabled verbose SQL logging by default.
+10. Added Backend /api/health endpoint.
+11. Added RAILWAY_DEPLOYMENT.md with root directories and variables.
+
+Local checks performed:
+- React/Vite production build: passed.
+- Flask ML /health endpoint: passed.
+- Flask ML /predict endpoint: passed.
+- Spring Boot local build could not be executed in this environment because Maven Central downloads were unavailable; Railway's Docker build will perform the Maven build.
