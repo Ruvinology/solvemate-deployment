@@ -16,7 +16,7 @@ import java.net.http.HttpResponse;
 public class GeminiService {
 
     private static final String GEMINI_URL =
-            "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent";
+        "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent";
 
     @Value("${gemini.api.key}")
     private String apiKey;
