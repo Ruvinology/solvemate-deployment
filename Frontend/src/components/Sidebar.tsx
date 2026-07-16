@@ -17,6 +17,7 @@ const NAV = [
     { key: "compatibility", label: "Compatibility" },
     { key: "trials",        label: "Trials" },
     { key: "reports",       label: "Reports" },
+    { key: "pricing", label: "Pricing" },
 ];
 
 export default function Sidebar({ fullName, email, role, activePage, onNavigate }: Props) {

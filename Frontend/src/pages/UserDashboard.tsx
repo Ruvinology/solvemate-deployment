@@ -9,6 +9,7 @@ import CompatibilityPage from "./CompatibilityPage";
 import TrialsPage from "./TrialsPage";
 import ReportsPage from "./ReportsPage";
 import { getDashboardStats, type DashboardStats } from "../services/api";
+import PricingPage from "./PricingPage";
 import "../styles/layout.css";
 
 export default function UserDashboard() {
@@ -22,6 +23,7 @@ export default function UserDashboard() {
             case "compatibility": return <CompatibilityPage />;
             case "trials":        return <TrialsPage />;
             case "reports":       return <ReportsPage />;
+            case "pricing":       return <PricingPage />;
             default:              return <DashboardHome onNavigate={setActivePage} user={user} />;
         }
     };
