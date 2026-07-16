@@ -78,7 +78,7 @@ export default function ReportPage({ trial, onBack }: Props) {
                 <button className="back-btn" onClick={onBack}>← Back to Trials List</button>
                 <div className="report-actions">
                     <button className="report-action-btn" onClick={handleDownload}>
-                        ⬇ Download PDF
+                        ⬇ Download PDF <span className="pro-badge">Pro</span>
                     </button>
                     <button className="report-action-btn" onClick={handlePrint}>
                         🖨 Print
