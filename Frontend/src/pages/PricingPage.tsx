@@ -3,7 +3,7 @@ import "../styles/pricing.css";
 const TIERS = [
     {
         name: "Free",
-        price: "$0",
+        price: "Rs. 0",
         period: "/ 14-day free trial",
         tagline: "For students and individual researchers",
         features: [
