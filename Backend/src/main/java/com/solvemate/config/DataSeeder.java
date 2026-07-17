@@ -176,7 +176,7 @@ public class DataSeeder implements CommandLineRunner {
         seed("Benzophenone", 19.6, 8.6, 5.7, 164.2, 22.1497, 18.2, "LOW", false);
         seed("Benzothiazole", 20.6, 5.2, 8.4, 108.5, 22.8464, 15.4, "MEDIUM", false);
         seed("Benzotrichloride", 20.2, 6.6, 3.2, 142.1, 21.4905, 17.1, "LOW", false);
-        seed("Benzoyl Chloride", 20.7, 8.2, 4.5, 116.0, 22.7152, 15.8, "LOW", false);
+        seed("Benzoyl Chloride", 20.7, 8.2, 4.5, 116.0, 22.7152, 15.8, "HIGH", false);
         seed("Benzyl Acetate", 18.3, 5.7, 6.0, 142.8, 20.0843, 17.1, "LOW", false);
         seed("Benzyl Alcohol", 18.4, 6.3, 13.7, 103.6, 23.7895, 15.2, "MEDIUM", false);
         seed("Benzyl Amine", 19.2, 4.6, 11.7, 109.2, 22.9497, 15.5, "MEDIUM", false);
@@ -193,7 +193,7 @@ public class DataSeeder implements CommandLineRunner {
         seed("Bromobenzene", 20.5, 5.5, 4.1, 105.3, 21.6174, 15.3, "LOW", false);
         seed("Bromochloromethane", 17.3, 5.7, 3.5, 65.0, 18.548, 13.2, "LOW", false);
         seed("Bromoethylene", 16.1, 6.3, 2.3, 71.6, 17.441, 13.6, "LOW", false);
-        seed("Bromoform", 21.4, 4.1, 6.1, 87.5, 22.627, 14.4, "LOW", false);
+        seed("Bromoform", 21.4, 4.1, 6.1, 87.5, 22.627, 14.4, "HIGH", true);
         seed("Bromomethyl Methyl Ether", 16.9, 8.5, 7.0, 81.6, 20.1708, 14.1, "LOW", false);
         seed("Bromotrichloro Methane (P and H from", 18.3, 8.1, 6.0, 99.2, 20.8926, 15.0, "LOW", false);
         seed("Butadiene", 14.7, 1.7, 6.2, 82.3, 16.0443, 14.1, "LOW", false);
@@ -316,7 +316,7 @@ public class DataSeeder implements CommandLineRunner {
         seed("Dimethyl Diketone", 15.7, 5.3, 11.7, 88.2, 20.2847, 14.4, "MEDIUM", false);
         seed("Dimethyl Disulfid", 17.3, 7.8, 6.5, 88.6, 20.0594, 14.4, "LOW", false);
         seed("Dimethyl Ether", 15.2, 6.1, 5.7, 63.2, 17.3419, 13.2, "LOW", false);
-        seed("Dimethyl Formamide", 17.4, 13.7, 11.3, 77.0, 24.8624, 13.8, "MEDIUM", false);
+        seed("Dimethyl Formamide", 17.4, 13.7, 11.3, 77.0, 24.8624, 13.8, "HIGH", true);
         seed("Dimethyl Hydrazine", 15.3, 5.9, 11.0, 76.0, 19.7459, 13.8, "MEDIUM", true);
         seed("Dimethyl Methyl Phosphonate", 16.7, 13.1, 7.5, 106.9, 22.5111, 15.3, "MEDIUM", false);
         seed("Dimethyl Phthalate", 18.6, 10.8, 4.9, 163.0, 22.0592, 18.1, "LOW", false);
@@ -503,7 +503,7 @@ public class DataSeeder implements CommandLineRunner {
         seed("N-Methylaniline", 19.5, 6.0, 11.5, 108.4, 23.4201, 15.4, "MEDIUM", false);
         seed("Naphthalene", 19.2, 2.0, 5.9, 111.5, 20.1854, 15.6, "LOW", false);
         seed("Naphthol", 19.7, 6.3, 12.3, 131.7, 24.0639, 16.6, "MEDIUM", false);
-        seed("Nitrobenzene", 20.0, 8.6, 4.1, 102.7, 22.1533, 15.1, "LOW", false);
+        seed("Nitrobenzene", 20.0, 8.6, 4.1, 102.7, 22.1533, 15.1, "HIGH", false);
         seed("Nitroethane", 16.0, 15.5, 4.5, 71.5, 22.7266, 13.6, "LOW", false);
         seed("Nitroethylene", 16.3, 16.6, 5.0, 59.9, 23.796, 13.0, "LOW", false);
         seed("Nitromethane", 15.8, 18.8, 5.1, 54.3, 25.0817, 12.7, "HIGH", false);
@@ -607,7 +607,7 @@ public class DataSeeder implements CommandLineRunner {
         seed("Thiophenol", 20.0, 4.5, 10.3, 102.4, 22.9421, 15.1, "MEDIUM", false);
         seed("Thiourea", 20.0, 21.7, 14.8, 72.8, 33.0141, 13.6, "MEDIUM", false);
         seed("Toluene", 18.0, 1.4, 2.0, 106.8, 18.1648, 15.3, "MEDIUM", false);
-        seed("Toluidine", 19.4, 5.8, 9.4, 107.8, 22.324, 15.4, "MEDIUM", false);
+        seed("Toluidine", 19.4, 5.8, 9.4, 107.8, 22.324, 15.4, "HIGH", true);
         seed("Trans-Decahydronaphthalene", 18.0, 0.0, 0.0, 156.9, 18.0, 17.8, "LOW", false);
         seed("Tri Butyl Phosphate", 16.3, 6.3, 4.3, 274.0, 17.9964, 23.7, "LOW", false);
         seed("Tri-n-Butyl Borate", 16.7, 1.8, 4.6, 269.7, 17.4152, 23.5, "LOW", false);
@@ -629,7 +629,7 @@ public class DataSeeder implements CommandLineRunner {
         seed("Trimethylphosphate", 16.7, 15.9, 10.2, 115.8, 25.2139, 15.8, "MEDIUM", false);
         seed("Trinitomethane", 15.5, 10.3, 7.3, 94.6, 19.9907, 14.7, "MEDIUM", false);
         seed("Trioctylphosphate", 16.2, 5.9, 4.2, 469.8, 17.7451, 33.5, "LOW", false);
-        seed("Triphenyl Phosphate", 20.1, 6.4, 6.8, 271.9, 22.1633, 23.6, "LOW", false);
+        seed("Triphenyl Phosphate", 20.1, 6.4, 6.8, 271.9, 22.1633, 23.6, "HIGH", false);
         seed("Undecane", 16.0, 0.0, 0.0, 212.7, 16.0, 20.6, "LOW", false);
         seed("Valeronitrile", 15.3, 11.0, 4.8, 103.8, 19.4456, 15.2, "LOW", false);
         seed("Vinyl Acetate", 16.0, 7.2, 5.9, 92.6, 18.5108, 14.6, "LOW", false);
@@ -665,7 +665,7 @@ public class DataSeeder implements CommandLineRunner {
         seed("n-Pentyl Propionate", 15.8, 5.2, 5.7, 165.3, 17.5832, 18.3, "LOW", false);
         seed("n-Propyl Acetate", 15.3, 4.3, 7.6, 115.3, 17.6165, 15.8, "MEDIUM", false);
         seed("n-Tetradecane", 16.2, 0.0, 0.0, 261.3, 16.2, 23.1, "LOW", false);
-        seed("o-Xylene", 17.8, 1.0, 3.1, 121.2, 18.0956, 16.1, "LOW", false);
+        seed("o-Xylene", 17.8, 1.0, 3.1, 121.2, 18.0956, 16.1, "MEDIUM", false);
         seed("tert-Butyl Acetate", 15.4, 6.2, 6.2, 134.1, 17.7212, 16.7, "LOW", false);
 
         solventRepository.findAll().stream()

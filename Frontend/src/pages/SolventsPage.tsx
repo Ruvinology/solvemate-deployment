@@ -62,7 +62,7 @@ export default function SolventsPage() {
                 <div>
                     <h1 className="page-title">Solvent Management</h1>
                     <p className="page-subtitle">
-                        {loading ? "Loading catalog…" : `${solvents.length} solvents · HSP, cost & regulatory data`}
+                        {loading ? "Loading catalog…" : `${solvents.length} solvents · HSP & regulatory data`}
                     </p>
                 </div>
                 {isAdmin && <button className="btn-primary" onClick={() => { setEditing(null); setShowModal(true); }}>+ Add Solvent</button>}
@@ -83,7 +83,7 @@ export default function SolventsPage() {
             ) : (
                 <div className="table-wrapper">
                     <table className="data-table">
-                        <thead><tr><th>#</th><th>Name</th><th>Formula</th><th>δD</th><th>δP</th><th>δH</th><th>Cost/L</th><th>Env.</th><th>EU Ban</th>{isAdmin && <th>Actions</th>}</tr></thead>
+                        <thead><tr><th>#</th><th>Name</th><th>Formula</th><th>δD</th><th>δP</th><th>δH</th><th>Env.</th><th>EU Ban</th>{isAdmin && <th>Actions</th>}</tr></thead>
                         <tbody>
                         {paged.map((s, i) => (
                             <tr key={s.solventId}>
@@ -91,7 +91,6 @@ export default function SolventsPage() {
                                 <td className="td-bold">{s.name}</td>
                                 <td className="td-muted">{s.chemicalFormula || "—"}</td>
                                 <td>{s.deltaD.toFixed(2)}</td><td>{s.deltaP.toFixed(2)}</td><td>{s.deltaH.toFixed(2)}</td>
-                                <td>${s.costPerLiter.toFixed(2)}</td>
                                 <td><span className={`badge ${envBadge(s.envImpactScore)}`}>{s.envImpactScore}</span></td>
                                 <td><span className={`badge ${s.euBanStatus ? "badge-red" : "badge-green"}`}>{s.euBanStatus ? "Banned" : "Allowed"}</span></td>
                                 {isAdmin && <td className="td-actions">

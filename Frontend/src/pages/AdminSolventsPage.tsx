@@ -89,7 +89,7 @@ export default function AdminSolventsPage() {
                 <div className="table-wrapper">
                     <table className="data-table">
                         <thead>
-                            <tr><th>#</th><th>Name</th><th>δD</th><th>δP</th><th>δH</th><th>Cost/L</th><th>Env.</th><th>EU Ban</th><th>Actions</th></tr>
+                            <tr><th>#</th><th>Name</th><th>δD</th><th>δP</th><th>δH</th><th>Env.</th><th>EU Ban</th><th>Actions</th></tr>
                         </thead>
                         <tbody>
                             {paged.map((s, i) => (
@@ -99,7 +99,6 @@ export default function AdminSolventsPage() {
                                     <td>{s.deltaD.toFixed(2)}</td>
                                     <td>{s.deltaP.toFixed(2)}</td>
                                     <td>{s.deltaH.toFixed(2)}</td>
-                                    <td>${s.costPerLiter.toFixed(2)}</td>
                                     <td><span className={`badge ${envBadge(s.envImpactScore)}`}>{s.envImpactScore}</span></td>
                                     <td><span className={`badge ${s.euBanStatus ? "badge-red" : "badge-green"}`}>{s.euBanStatus ? "Banned" : "Allowed"}</span></td>
                                     <td className="td-actions">
