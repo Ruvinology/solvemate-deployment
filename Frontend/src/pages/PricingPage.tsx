@@ -4,7 +4,7 @@ const TIERS = [
     {
         name: "Free",
         price: "$0",
-        period: "forever",
+        period: "/ 14-day free trial",
         tagline: "For students and individual researchers",
         features: [
             "Full 541-solvent catalog",
@@ -18,7 +18,7 @@ const TIERS = [
     },
     {
         name: "Pro",
-        price: "$9",
+        price: "Rs. 2,990",
         period: "/ month",
         tagline: "For active researchers and small labs",
         features: [
@@ -33,7 +33,7 @@ const TIERS = [
     },
     {
         name: "Team",
-        price: "$49",
+        price: "Rs. 16,490",
         period: "/ month",
         tagline: "For research groups and small companies",
         features: [
