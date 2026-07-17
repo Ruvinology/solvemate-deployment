@@ -70,8 +70,7 @@ export default function PricingPage() {
                 <span className="pricing-hero-tag">Pricing</span>
                 <h1>Plans for every stage of your research</h1>
                 <p>
-                    SolveMate is free to use today. Paid tiers below outline our planned
-                    roadmap as the platform grows — payment integration is not yet live.
+                    Start with a 14-day free trial. Paid tiers below outline our planned roadmap as the platform grows. Payment integration is not yet live.
                 </p>
             </div>
 
