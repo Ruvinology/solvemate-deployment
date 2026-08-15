@@ -27,7 +27,7 @@ interface UpgradePlan {
 const UPGRADE_PLANS: UpgradePlan[] = [
     {
         name: "Pro",
-        price: "Rs. 2,990",
+        price: "Rs. 579",
         period: "per month",
         tagline: "For active researchers and small labs",
         highlight: true,
@@ -40,7 +40,7 @@ const UPGRADE_PLANS: UpgradePlan[] = [
     },
     {
         name: "Team",
-        price: "Rs. 16,490",
+        price: "Rs. 2,499",
         period: "per month",
         tagline: "For research groups and small companies",
         highlight: false,

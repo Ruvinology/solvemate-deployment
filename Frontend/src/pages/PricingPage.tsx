@@ -23,7 +23,7 @@ const TIERS = [
     },
     {
         name: "Pro",
-        price: "Rs. 2,990",
+        price: "Rs. 579",
         period: "/ month",
         tagline: "For active researchers and small labs",
         features: [
@@ -38,7 +38,7 @@ const TIERS = [
     },
     {
         name: "Team",
-        price: "Rs. 16,490",
+        price: "Rs. 2,499",
         period: "/ month",
         tagline: "For research groups and small companies",
         features: [
