@@ -48,6 +48,8 @@ public class UserServiceImpl implements UserService {
         response.setRole(user.getRole());
         response.setFullName(user.getFullName());
         response.setEmail(user.getEmail());        // to make sure email is set
+        // Account creation date drives the 14-day free-trial countdown on the client.
+        response.setCreatedAt(user.getCreatedAt() != null ? user.getCreatedAt().toString() : null);
         return response;
     }
 

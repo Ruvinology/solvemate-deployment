@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { logoutUser } from "../services/api";
 import SolveMateLogo from "./SolveMateLogo";
+import { getTrialState, trialBadgeLabel } from "../utils/trial";
 
 interface Props {
     fullName:   string;
@@ -22,6 +23,8 @@ const NAV = [
 
 export default function Sidebar({ fullName, email, role, activePage, onNavigate }: Props) {
     const navigate = useNavigate();
+    const trial = getTrialState();
+    const showTrialBadge = role !== "ADMIN";
 
     const handleLogout = async () => {
         try { await logoutUser(); } catch { /* ignore */ }
@@ -54,6 +57,16 @@ export default function Sidebar({ fullName, email, role, activePage, onNavigate 
                 </nav>
             </div>
             <div className="sidebar-footer">
+                {showTrialBadge && (
+                    <button
+                        className={`sidebar-trial-badge ${trial.expired ? "ended" : ""}`}
+                        onClick={() => onNavigate("trial-status")}
+                        title="View your free trial status"
+                    >
+                        <span className="sidebar-trial-dot" />
+                        {trialBadgeLabel(trial)}
+                    </button>
+                )}
                 <div className="sidebar-user">
                     <p className="sidebar-user-name">{fullName}</p>
                     <p className="sidebar-user-email">{email}</p>

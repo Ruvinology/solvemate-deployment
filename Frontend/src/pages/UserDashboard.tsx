@@ -10,11 +10,13 @@ import TrialsPage from "./TrialsPage";
 import ReportsPage from "./ReportsPage";
 import { getDashboardStats, type DashboardStats } from "../services/api";
 import PricingPage from "./PricingPage";
+import TrialStatusPage from "./TrialStatusPage";
+import { getStoredUser } from "../utils/trial";
 import "../styles/layout.css";
 
 export default function UserDashboard() {
     const [activePage, setActivePage] = useState("dashboard");
-    const user = JSON.parse(localStorage.getItem("user") || "{}");
+    const user = getStoredUser();
 
     const renderPage = () => {
         switch (activePage) {
@@ -23,7 +25,8 @@ export default function UserDashboard() {
             case "compatibility": return <CompatibilityPage />;
             case "trials":        return <TrialsPage />;
             case "reports":       return <ReportsPage />;
-            case "pricing":       return <PricingPage />;
+            case "pricing":       return <PricingPage onNavigate={setActivePage} />;
+            case "trial-status":  return <TrialStatusPage onNavigate={setActivePage} />;
             default:              return <DashboardHome onNavigate={setActivePage} user={user} />;
         }
     };
@@ -34,7 +37,7 @@ export default function UserDashboard() {
                 fullName={user.fullName || "Lab User"}
                 email={user.email || "user@solvemate.lab"}
                 role={user.role || "LAB_USER"}
-                activePage={activePage}
+                activePage={activePage === "trial-status" ? "pricing" : activePage}
                 onNavigate={setActivePage}
             />
             <main className="dashboard-main">

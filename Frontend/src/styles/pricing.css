@@ -51,6 +51,11 @@
     box-shadow: 0 8px 24px rgba(37, 99, 235, 0.12);
 }
 
+.pricing-card.current {
+    border: 2px solid var(--color-success);
+    box-shadow: var(--shadow-md);
+}
+
 .pricing-badge {
     position: absolute;
     top: -12px;
@@ -62,6 +67,62 @@
     font-weight: 700;
     padding: 4px 12px;
     border-radius: 999px;
+}
+
+.pricing-badge.current-badge {
+    background: var(--color-success);
+}
+
+.pricing-badge.current-badge.ended {
+    background: var(--color-danger);
+}
+
+/* Live trial readout inside the Free card */
+
+.pricing-trial-status {
+    margin: -6px 0 16px;
+    padding: 10px 12px;
+    background: var(--color-success-bg);
+    border: 1px solid var(--color-success-bg);
+    border-radius: var(--radius-sm);
+}
+
+.pricing-trial-line {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 7px;
+}
+
+.pricing-trial-day {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--color-success);
+}
+
+.pricing-trial-left {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: var(--color-success);
+}
+
+.pricing-trial-track {
+    height: 5px;
+    background: var(--color-surface);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.pricing-trial-fill {
+    height: 100%;
+    border-radius: 999px;
+    background: var(--color-success);
+    transition: width 600ms ease;
+}
+
+.pricing-trial-fill.ended {
+    background: var(--color-danger);
 }
 
 .pricing-card h3 {
@@ -130,6 +191,16 @@
 
 .pricing-cta:not(:disabled) {
     cursor: pointer;
+}
+
+.pricing-cta.active-plan {
+    background: var(--color-success);
+    color: var(--color-surface);
+    border: none;
+}
+
+.pricing-cta.active-plan:hover {
+    filter: brightness(0.92);
 }
 
 .pricing-footnote {

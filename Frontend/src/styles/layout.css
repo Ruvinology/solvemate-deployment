@@ -379,6 +379,47 @@
     padding-top: 16px;
 }
 
+/* Free-trial countdown pill — visible on every page, opens the trial status view. */
+.sidebar-trial-badge {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: var(--radius-sm);
+    background: linear-gradient(135deg, var(--color-primary), #7c3aed);
+    color: var(--color-surface);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+    transition: filter 150ms ease;
+}
+
+.sidebar-trial-badge:hover {
+    filter: brightness(1.12);
+}
+
+.sidebar-trial-badge.ended {
+    background: var(--color-danger);
+}
+
+.sidebar-trial-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--color-surface);
+    flex-shrink: 0;
+    animation: trial-pulse 2s ease-in-out infinite;
+}
+
+@keyframes trial-pulse {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: 0.35; }
+}
+
 .sidebar-user {
     padding: 0 8px;
     margin-bottom: 12px;

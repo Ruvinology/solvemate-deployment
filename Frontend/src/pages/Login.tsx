@@ -16,7 +16,8 @@ export default function Login() {
         if (!email || !password) { setError("Please enter email and password"); return; }
         try {
             setLoading(true);
-            const result = await loginUser({ email, password }) as { role: string; fullName: string; email: string };
+            // createdAt is the account's signup timestamp — it drives the free-trial countdown.
+            const result = await loginUser({ email, password }) as { role: string; fullName: string; email: string; createdAt?: string };
             localStorage.setItem("user", JSON.stringify(result));
             if (result.role === "ADMIN") navigate("/admin");
             else navigate("/user");
